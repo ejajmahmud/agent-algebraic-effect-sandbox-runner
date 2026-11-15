@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-algebraic-effect-sandbox-runner"
+version = "0.1.0"
+description = "Purely functional algebraic effect system isolating side effects (file I/O, network) behind resumable algebraic handlers"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-algebraic-effect-sandbox-runner = "agent_algebraic_effect_sandbox_runner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_algebraic_effect_sandbox_runner*"]
